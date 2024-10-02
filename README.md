@@ -1,23 +1,29 @@
 <p align="center">
   <a href="#">
-    <img src="https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/deeeb463-c161-4fc6-8407-71c3d8b7defe" alt="Logo"  >
+    <img src="https://github.com/user-attachments/assets/df1a3ec1-8c03-43c8-9432-c71358c35b9e" >
   </a>
   <br>
-  <a href="#">
-    <img src="https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/36714716-6990-40b0-84d5-cd7432811bcb" alt="Logo"  >
+
+<p align="center">
+
+  <a href="https://docs.gca.dev">
+    <img src="https://github.com/user-attachments/assets/c60562bf-540e-47d9-b578-994285071128" width="250">
   </a>
 
-  <h3 align="center">GPT Computer Assistant</h3>
-  <p align="center">
-    <a href="https://discord.gg/qApFmWMt8x"><img alt="Static Badge" src="https://img.shields.io/badge/Discord-Join?style=social&logo=discord" width=150></a>
-  </p>
+</p>
 
   <p align="center">
-    gpt-4o for windows, macos and ubuntu
+    <a href="https://www.producthunt.com/posts/gpt-computer-assistant?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-gpt&#0045;computer&#0045;assistant" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=465468&theme=dark&period=daily" alt="GPT&#0032;Computer&#0032;Assistant - Create&#0032;intelligence&#0032;for&#0032;your&#0032;products | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+    .
+    <a href="https://discord.gg/qApFmWMt8x"><img alt="Static Badge" src="https://img.shields.io/badge/Discord-Join?style=social&logo=discord" width=150></a>
+    .
+    <a href="https://x.com/GPTCompAsst"><img alt="Static Badge" src="https://img.shields.io/badge/X_App-Join?style=social&logo=x" width=150></a>
+  </p>
+
+
+  <p align="center">
     <br />
-   <a href="https://github.com/onuratakan/gpt-computer-assistant/wiki"><strong>Documentation</strong></a>
-   .
-    <a href="https://github.com/onuratakan/gpt-computer-assistant/#Capabilities"><strong>Explore the capabilities »</strong></a>
+    Intelligence development framework
     <br />
     </p>
     <br>
@@ -31,13 +37,11 @@
   </p>
 
 
-  <p align="center">
-   <a href="https://x.com/GPTCompAsst"><img alt="Static Badge" src="https://img.shields.io/twitter/follow/GPTCompAsst?style=social" width=160></a>
-</p>
+
 
 |ENGLISH|[简体中文](README.zh_CN.md)|[正體中文](README.zh_TW.md)|[TÜRKÇE](README.TR.md)
 
-# GPT Computer Assistant
+# GPT Computer Assistant(GCA)
 Hi, this is an alternative work for providing ChatGPT MacOS app to Windows and Linux. In this way this is a fresh and stable work. You can easily install as Python library for this time but we will prepare a pipeline for providing native install scripts (.exe).
 
 Powered by <a href="https://github.com/Upsonic/Tiger"><strong>Upsonic Tiger 🐅</strong></a> A function hub for llm agents.
@@ -45,157 +49,121 @@ Powered by <a href="https://github.com/Upsonic/Tiger"><strong>Upsonic Tiger 🐅
 
 
 
-## Installation and Run
-Needed >= Python 3.9
-```console
-pip3 install 'gpt-computer-assistant[base]'
-```
+## 1. Install and run
+**Python 3.10 or 3.11 is required**
 
 ```console
-computerassistant
+pip install 'gpt-computer-assistant[base]'
+pip install 'gpt-computer-assistant[api]'
 ```
 
-### Wake Word | NEW
-<details>
-
-
-We have added Pvporcupine integration. To use it, you need to install an additional library:
-
-```console
-pip3 install 'gpt-computer-assistant[wakeword]'
-```
-
-After that, please enter your [Pvporcupine](https://picovoice.ai/) API key and enable the wake word feature.
-</details>
-
-<p align="center">
-<br>
-  <br>
-  <br>
-
-</p>
-
-
-<p align="center">
-<a href="#">
-    <img src="https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/5c6b7063-3d9b-4ea6-befa-ce15d69fcd43" alt="Logo"  >
-  </a>
-</p>
-
-
-### Agent Infrastructure
-
-With this way you can create `crewai` agents and using it into gpt-computer-assistant gui and tools.
-
-
-```console
-pip3 install 'gpt-computer-assistant[base]'
-pip3 install 'gpt-computer-assistant[agentic]'
-```
-
-```python
-from gpt_computer_assistant import Agent, start
-
-manager = Agent(
-  role='Project Manager',
-  goal='understands project needs and assist coder',
-  backstory="""You're a manager at a large company.""",
-)
-
-coder = Agent(
-  role='Senior Python Coder',
-  goal='writing python scripts and copying to clipboard',
-  backstory="""You're a python developer at a large company.""",
-)
-
-
-start()
-```
-
-
-
-<p align="center">
-<a href="#">
-    <img src="https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/c78f3460-6660-4da6-8941-a8ac5cfc1191" alt="Logo"  >
-  </a>
-</p>
-
-### Adding Custom Tools
-
-Now you are able to add custom tools that run in the agentic infra and assistant processes. 
-
-
-```python
-from gpt_computer_assistant import Tool, start
-
-@Tool
-def sum_tool(first_number: int, second_number: int) -> str:
-    """Useful for when you need to sum two numbers together."""
-    return first_number + second_number
-
-start()
-```
-
-
-
-
-
-
-<p align="center">
-<a href="#">
-    <img src="https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/65b5fe7c-c0e1-40e9-9447-f41cd4f369a3" alt="Logo"  >
-  </a>
-</p>
-
-
-### API | NEW
-
-Now you can use your GPT Computer Assistant remotely! GUI still active, for this there is few steps:
-
-```console
-pip3 install 'gpt-computer-assistant[base]'
-pip3 install 'gpt-computer-assistant[api]'
-```
+To run gpt-computer-assistant, simply type
 
 ```console
 computerassistant --api
 ```
 
 
+<p align="center">
+
+  <a href="#">
+    <img src="https://github.com/user-attachments/assets/890b4e0a-4484-4870-a158-2d365b0d969e" >
+  </a>
+
+</p>
+
+
+
+
+<p align="center">
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+</p>
+
+
+
+
+
+
+## 2. LLM Settings
+
 ```python
 from gpt_computer_assistant.remote import remote
 
-output = remote.input("Hi, how are you today?", screen=False, talk=False)
-print(output)
+remote.save_models("gpt-4o")
+remote.save_openai_api_key("sk-**")
+```
 
-remote.just_screenshot()
+<p align="start">
 
-remote.talk("TTS test")
+  <a href="https://docs.upsonic.co/gca/dev_guides/llm_settings">
+    <img src="https://github.com/user-attachments/assets/a75c8ddf-f9df-436b-9dc8-c5220211e15e" width="150">
+  </a>
 
-# Other Functionalities
-remote.reset_memory()
-remote.profile("default")
+</p>
 
-remote.enable_predefined_agents()
-remote.disable_predefined_agents()
 
-remote.enable_online_tools()
-remote.disable_online_tools()
+
+<p align="center">
+<br>
+  <br>
+  <br>
+</p>
+
+
+
+## 3. Characteristic API
+
+
+```python
+# Name of the assitant:
+remote.change_name("X Intelligence")
+
+#Developer personna of the assistant:
+remote.change_developer("X Company")
+```
+
+<p align="start">
+
+  <a href="https://docs.upsonic.co/gca/dev_guides/characteristic">
+    <img src="https://github.com/user-attachments/assets/d7e02ac6-e40c-4b35-8e65-4621bf3fb9a1" width="150">
+  </a>
+
+</p>
+
+
+
+<p align="center">
+<br>
+  <br>
+  <br>
+</p>
+
+
+
+## 4. Connect Your Functions API
+
+
+```python
+# Installing an library:
+remote.install_library("numpy")
+
+
+
+# Adding functianility as python functions:
+@remote.custom_tool
+def my_server_status() -> bool:
+  """
+  Check the server status.
+  """
+  return True
 ```
 
 
 
-
-
-
-<p align="center">
-<br>
-  <br>
-  <br>
-  <br>
-  <br>
-</p>
-
 <p align="center">
 <br>
   <br>
@@ -203,7 +171,63 @@ remote.disable_online_tools()
 </p>
 
 
-https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/26ae3624-e619-44d6-9b04-f39cf1ac1f8f
+
+## 5. Interact with User API
+
+
+### remote.input
+
+Talk with assistant, about user and computer. With this api you can create an consulting process.
+
+```markdown
+`Hi, look to user window and return which app using now`
+
+`Ask user to is user need any kind of supoprt`
+
+`Extract the user redis config file.`
+```
+
+With this questions you will make a shortcut for your needs. 
+**You can collect informations from user computer or directly from user or user computer.**
+
+```python
+output = remote.input("Extract the user redis config file.", screen=False)
+print(output)
+```
+
+
+<p align="start">
+
+  <a href="https://docs.upsonic.co/gca/dev_guides/interact">
+    <img src="https://github.com/user-attachments/assets/81614347-ab85-4965-9b77-225d0f2961e9" width="150">
+  </a>
+  .
+  <a href="https://docs.upsonic.co/gca/dev_guides/interact">
+    <img src="https://github.com/user-attachments/assets/ecaa7590-f4c5-4eda-9482-462cef54aeff" width="150">
+  </a>
+  .
+  <a href="https://docs.upsonic.co/gca/dev_guides/interact">
+    <img src="https://github.com/user-attachments/assets/0f35df10-b32e-4fa1-936e-b336be46b1bd" width="150">
+  </a>
+
+</p>
+
+
+
+<p align="start">
+
+  <a href="https://docs.upsonic.co/gca/dev_guides/interact">
+    <img src="https://github.com/user-attachments/assets/a893c50c-3ede-4b42-90ee-92e2fea82120" width="150">
+  </a>
+
+</p>
+
+
+<p align="center">
+<br>
+  <br>
+  <br>
+</p>
 
 
 ## Usage
@@ -213,19 +237,8 @@ https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/26ae3624-e6
 
 ### Use cases
 
-<table>
-  <tr>
-    <td><img src="https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/b4a4f11e-5588-4656-b5d7-b612a9a2855b" alt="Take Meeting Notes" width="500"/></td>
-    <td><img src="https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/49eeac70-b33a-4ec4-8125-64127621ed62" alt="Daily Assistant" width="500"/></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/10b69a18-033c-4d81-8ac9-f4e3c65b59c3" alt="Read Docs" width="500"/></td>
-    <td><img src="https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/0f483bae-ffaf-4311-8653-c0dc64fb5ebe" alt="Coding Assistant" width="500"/></td>   
 
-  </tr>
-</table>
-
-
+<img alt="Screenshot 2024-08-13 at 18 33 52" src="https://github.com/user-attachments/assets/8f994160-893a-4f56-bbf0-4a7aa87af650">
 
 
 
@@ -245,13 +258,17 @@ https://github.com/onuratakan/gpt-computer-assistant/assets/41792982/26ae3624-e6
 | **Adding Custom Tools**  | Completed  | Q2 2024        |
 | Click on something on the screen (text and icon)              | Completed      | Q2 2024        |
 | New UI              | Completed      | Q2 2024        |
-| Native Applications, exe, dmg              | Failed (Agentic Infra libraries not supported for now)     | Q2 2024        |
+| Native Applications, exe, dmg              | Completed     | Q3 2024        |
 | **Collaborated Speaking Different Voice Models on long responses.**              | Completed     | Q2 2024        |
 | **Auto Stop Recording, when you complate talking**              | Completed     | Q2 2024        |
 | **Wakeup Word**              | Completed     | Q2 2024        |
 | **Continuously Conversations**              | Completed     | Q2 2024        |
-| **Adding more capability on device**              | Planned     | Q2 2024        |
-| DeepFace Integration (Facial Recognition)                    | Planned  | Q2 2024        |
+| **Adding more capability on device**              | Completed     | Q2 2024        |
+| **Local TTS**              | Completed     | Q3 2024        |
+| **Local STT**              | Completed     | Q3 2024        |
+| Tray Menu              | Completed     | Q3 2024        |
+| **Global Hotkey**              | On the way     | Q3 2024        |
+| DeepFace Integration (Facial Recognition)                    | Planned  | Q3 2024        |
 
 
 
@@ -264,6 +281,9 @@ At this time we have many infrastructure elements. We just aim to provide whole 
 
 | Capability                         | Status                      |
 |------------------------------------|----------------------------------|
+| **Local LLM with Vision (Ollama)**                    |            OK                    |
+| Local text-to-speech                    |            OK                    |
+| Local speech-to-text                    |            OK                    |
 | **Screen Read**                    |            OK                    |
 | **Click to and Text or Icon in the screen**                    |            OK                    |
 | **Move to and Text or Icon in the screen**                    |            OK                    |
